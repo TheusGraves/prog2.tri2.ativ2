@@ -1,37 +1,11 @@
-# 2026 IA24 programação II
+O código é uma aplicação simples de ToDo List onde é ultilizado o Bun com SQLita. Primeiramente, o arquivo database.sqçite é aberto, funcionando como o banco de dados da aplicação. Logo após, é executado um comando SQL que cria a tabela de items, onde possui um id automático e um campo title par armazenar os nomes das tarefas
 
-...
+Depois, são criadas queries onde vai fazer as operações principais do sistema aconterce. Como: Buscar itens com o Select, adicionar itens com o Insert, atualizar os itens com o Update e deletar os itens com o Delete. Cada queries são armazenadas em variáveis.
 
-# Entregáveis
+A classe Item representa cada tarefa da list, onde possui um título e o ID. Já o TodoList concentra as funções do sistema. A função addItem() salva no banco, o getItens() retorna todos os registros da tabela. A função deleteItem() remove itens com vase no ID, o updateItem() altera o titulo de um item existente.
 
-| Trimestre | Data/Entrega | Onde/Como entregar                                                       | Atividade | Objetivo |
-|:---------:|:------------:| ------------------------------------------------------------------------ | --------- | -------- |
-| 1º        | 19/05/2026   | github: prog2.tri1.rec *(informar conclusão por email/whatsapp)*         | `[RECUPERAÇÃO]` [leia e faça o solicitado neste link](prog2.tri1.rec.md) | treinar e demonstrar conhecimento da matéria a fim de recurar nota e conteúdo |
-| 2°        | 12/05/2026   | github: garatujas                                                        | garatujas/000-leitura-api.md: criar o arquivo e adicionando o conteúdo dos arquivos core.ts e api.turma02.ts e comentando seu funcionamento e cada uma das linhas. | treinar a capacidade de interpretação de código |
-| 2°        | 15/05/2026   | github: prog2.tri2.ativ-extra-1                                          | `[EXTRA]` adionar capacidade de fazer cache em rotas estáticas no `api.ts` | treinar a capacidade de interpretação de código e implementação de funcionalidades |
-| 2º        | 22/02/2026   | github: prog2.tri2.ativ1, mensagem do commit deve ser #prog2.tri2.ativ1  | [Seguir o tutorial](tri2.ativ1.tuto.001.md) | descrito no próprio tutorial |
-| 2º        | 29/02/2026   | github: prog2.tri2.ativ2, mensagem do commit deve ser #prog2.tri2.ativ2  | [Enunciado](tri2.ativ2.md) | descrito no próprio tutorial |
+Para rodar o projeto, é necessário instalar o Bun, criar uma pasta para o projeto e executar bun init. Depois disso, basta criar um arquivo index.ts, colar o código e executar o comando:
 
-# Steps
+´´ bun run index.ts ´´
 
-## Abrir pasta no `cmd`
-
-No windows crie um pasta nova
-- abra a pasta criada 
-- na barra de caminho digite `cmd` e pressione enter
-
-## Clonar o repósitório com chave `ghp`
-
-Na pasta criada execute:
-
-```bash
-git clone https://<<github_token>>@github.com/<<repo>> projeto
-```
-
-## Abrir o `vscode` com configurações em pasta específica
-
-Na pasta criada execute:
-
-```bash
-code --user-data-dir=data-vscode projeto
-```
+Ao rodar, o sistema cria o banco de dados, cria a tabela automaticamente e executa as funções presentes no código. Para testar, basta chamar os métodos da classe TodoList, como addItem() para adicionar tarefas, getItems() para listar, updateItem() para atualizar e deleteItem() para remover tarefas do banco de dados.
