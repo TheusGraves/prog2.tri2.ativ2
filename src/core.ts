@@ -65,3 +65,8 @@ class TodoList {
     };
   }
 }
+
+let list: TodoList = new TodoList();
+
+list.addItem(new Item("teste", 1));
+console.log(list.getItems());
